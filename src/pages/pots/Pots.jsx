@@ -1,4 +1,4 @@
-import "./pots.scss";
+import style from "./pots.module.scss";
 
 function Pots() {
   return <div></div>;

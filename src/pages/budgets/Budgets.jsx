@@ -1,4 +1,4 @@
-import "./budgets.scss";
+import style from "./budgets.module.scss";
 
 function Budgets() {
   return <div></div>;

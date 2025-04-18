@@ -1,4 +1,4 @@
-import "./transactions.scss";
+import style from "./transactions.module.scss";
 
 function Transactions() {
   return <div></div>;

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "./app/store.js";
 
 createRoot(document.getElementById("root")).render(
-  <Provider user={store}>
+  <Provider store={store}>
     <App />
   </Provider>
 );
