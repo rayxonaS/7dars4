@@ -5,7 +5,7 @@ function Register() {
   return (
     <section className={style.wrapper}>
       <div className={style.left}>
-        <img src="./public/sidebar.png" alt="Illustration" />
+        <img src="Sidebar.png" alt="Illustration" />
       </div>
       <div className={style.right}>
         <form className={style.form}>
