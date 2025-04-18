@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  height: auto;
   background-color: #f5f0ec;
 
   @media (max-width: 768px) {
@@ -19,7 +19,8 @@
   align-items: center;
 
   img {
-    width: 56px;
+    width: 560px;
+    height: 960px;
     margin-bottom: 2rem;
   }
 

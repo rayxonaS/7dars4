@@ -5,12 +5,7 @@ function Login() {
   return (
     <section className={style.wrapper}>
       <div className={style.left}>
-        <img alt="Illustration" />
-        <h2>Keep track of your money and save for your future</h2>
-        <p>
-          Personal finance app puts you in control of your spending. Track
-          transactions, set budgets, and add to savings pots easily.
-        </p>
+        <img src="../public/Sidebar.png" alt="Illustration" />
       </div>
       <div className={style.right}>
         <form className={style.form}>
