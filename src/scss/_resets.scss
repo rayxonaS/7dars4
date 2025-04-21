@@ -31,6 +31,15 @@ img {
   display: flex;
 }
 
+.main {
+  background-color: #fff;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
 .container {
   width: 100%;
   max-width: 1500px;
