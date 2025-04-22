@@ -4,6 +4,7 @@ import { login } from "../app/features/userSlice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { updateProfile } from "firebase/auth";
+import toast from "react-hot-toast";
 
 export const useRegister = () => {
   const dispatch = useDispatch();
@@ -20,9 +21,11 @@ export const useRegister = () => {
         photoURL: `https://api.dicebear.com/9.x/dylan/svg?seed=${req.user.uid}`,
       });
       const user = req.user;
+      toast.success(`Welcome, ${user.displayName}`);
       dispatch(login(user));
       setData(user);
     } catch (error) {
+      toast.error(error.message);
       console.log(error.message);
     } finally {
       setIsPending(false);

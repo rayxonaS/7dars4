@@ -5,7 +5,6 @@ import { useRegister } from "../../hooks/useRegister";
 
 function Register() {
   const { data, isPending, register } = useRegister();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -13,8 +12,9 @@ function Register() {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    register(name, password, email);
+    register(name, email, password);
   };
+
   return (
     <section className={style.login}>
       <div className={`${style.container} container`}>
@@ -44,7 +44,7 @@ function Register() {
                 Passwords must be at least 8 characters
               </p>
               {!isPending && (
-                <button className={`${style.login_btn} btn`}>
+                <button type="submit" className={`${style.login_btn} btn`}>
                   Create account
                 </button>
               )}
