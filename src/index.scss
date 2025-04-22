@@ -1,3 +1,4 @@
-@import "./scss/variables";
-@import "./scss/fonts";
-@import "./scss/resets";
+@use "./scss/variables" as *;
+@use "./scss/fonts" as *;
+@use "./scss/resets" as *;
+@use "./scss/button" as *;

@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+@import "../../scss/button";
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  span {
+    color: $grey-500;
+    font-size: $text-preset-5;
+    line-height: 150%;
+    font-weight: 700;
+  }
+
+  input {
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    border: 1px solid $grey-500;
+    font-family: inherit;
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
