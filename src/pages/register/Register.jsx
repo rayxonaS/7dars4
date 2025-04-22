@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 import style from "./register.module.scss";
 import Forminput from "../../components/forminput/Forminput";
+import { useRegister } from "../../hooks/useRegister";
 
 function Register() {
+  const { data, isPending, register } = useRegister();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    register(name, password, email);
+  };
   return (
     <section className={style.login}>
       <div className={`${style.container} container`}>
@@ -20,7 +32,7 @@ function Register() {
         <div className={style.login_right}>
           <div>
             <h1 className={style.login_title}>Sign up</h1>
-            <form className={style.login_form}>
+            <form onSubmit={handleSubmit} className={style.login_form}>
               <Forminput type="name" label="Name" name="name" />
               <Forminput type="email" label="Email" name="email" />
               <Forminput
@@ -31,9 +43,16 @@ function Register() {
               <p className={style.form_text}>
                 Passwords must be at least 8 characters
               </p>
-              <button className={`${style.login_btn} btn`}>
-                Create account
-              </button>
+              {!isPending && (
+                <button className={`${style.login_btn} btn`}>
+                  Create account
+                </button>
+              )}
+              {isPending && (
+                <button disabled className={`${style.login_btn} btn`}>
+                  Loading...
+                </button>
+              )}
               <p className={style.login_form_text}>
                 Already have an account?
                 <Link to="/login" className={style.login_form_link}>
