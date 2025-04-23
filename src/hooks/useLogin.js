@@ -5,22 +5,23 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
+import { useFirestore } from "./useFirestore";
 
 export const useLogin = () => {
   const dispatch = useDispatch();
 
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(null);
+  const { updateDocument } = useFirestore("users");
 
-  const login = async (displayname, email, password) => {
+  const login = async (email, password) => {
     setIsPending(true);
     try {
       const req = await signInWithEmailAndPassword(auth, email, password);
-      await updateProfile(auth.currentUser, {
-        displayname: displayname,
-        photoURL: `https://api.dicebear.com/9.x/dylan/svg?seed=${req.user.uid}`,
-      });
       const user = req.user;
+      updateDocument(user.uid, {
+        online: true,
+      });
       toast.success(`Welcome back, ${user.displayName}`);
       dispatch(login(user));
       setData(user);

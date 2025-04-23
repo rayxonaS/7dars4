@@ -47,7 +47,7 @@ function Login() {
               )}
               <p className={style.login_form_text}>
                 Need to create an account?
-                <Link to="/login" className={style.login_form_link}>
+                <Link to="/register" className={style.login_form_link}>
                   {" "}
                   Sign Up
                 </Link>
