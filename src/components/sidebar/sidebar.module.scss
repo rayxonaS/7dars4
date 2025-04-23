@@ -4,5 +4,38 @@
   background-color: #201f24;
   height: 100vh;
   padding-top: 4rem;
-  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.link {
+  display: flex;
+  width: 100%;
+  max-width: 276px;
+  height: 56px;
+  gap: 1.6rem;
+  font-size: $text-preset-3;
+  line-height: 150%;
+  color: $grey-300;
+  font-weight: 700;
+
+  &:hover {
+    background-color: #f8f4f0;
+    border-radius: 8px;
+    color: $grey-900;
+  }
+}
+
+.header_image {
+  color: $grey-300;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+img {
+  margin-bottom: 6.4rem;
 }

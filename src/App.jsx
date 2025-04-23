@@ -50,7 +50,7 @@ function App() {
           element: <Pots />,
         },
         {
-          path: "/recuringBillss",
+          path: "/recuringBills",
           element: <RecuringBills />,
         },
         {
