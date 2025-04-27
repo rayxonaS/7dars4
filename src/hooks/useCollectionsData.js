@@ -2,7 +2,7 @@ import { collection, getDoc, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase/config";
 
-export const useCollectionsData = (names) => {
+export const useCollectionsData = () => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(false);
 
@@ -44,7 +44,7 @@ export const useCollectionsData = (names) => {
           ...doc.data(),
         }));
 
-        console.log(balance, transactions, pots, balance);
+        setData({ balance, transactions, pots, balance });
       } catch (error) {
         console.log(error.message);
       } finally {
@@ -53,4 +53,6 @@ export const useCollectionsData = (names) => {
     }
     fetchMultipleCollection();
   }, []);
+
+  return { data, isPending };
 };

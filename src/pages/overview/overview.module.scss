@@ -1,1 +1,89 @@
 @import "../../scss/variables";
+
+.container {
+  padding: $spacing-300;
+  background-color: $grey-100;
+  font-size: $text-preset-3;
+  color: $grey-900;
+}
+
+.loader {
+  padding: $spacing-300;
+  font-size: $text-preset-2;
+  color: $grey-500;
+}
+
+.balanceSection {
+  display: flex;
+  gap: $spacing-200;
+  margin-bottom: $spacing-300;
+}
+
+.balanceCard {
+  background-color: $white;
+  padding: $spacing-200;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+.label {
+  font-size: $text-preset-4;
+  color: $grey-500;
+  margin-bottom: $spacing-50;
+}
+
+.amount {
+  font-size: $text-preset-2;
+  font-weight: bold;
+}
+
+.section {
+  background-color: $white;
+  padding: $spacing-200;
+  margin-bottom: $spacing-300;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  font-size: $text-preset-2;
+  font-weight: bold;
+  margin-bottom: $spacing-100;
+}
+
+.subtitle {
+  font-size: $text-preset-4;
+  color: $grey-500;
+  margin-bottom: $spacing-100;
+}
+
+.items {
+  display: grid;
+  gap: $spacing-100;
+}
+
+.item {
+  font-size: $text-preset-3;
+  line-height: $line-height-150;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-100;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  font-size: $text-preset-3;
+}
+
+.positive {
+  color: $green;
+}
+
+.negative {
+  color: $red;
+}
