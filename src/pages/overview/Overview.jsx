@@ -1,4 +1,5 @@
 import { useCollectionsData } from "../../hooks/useCollectionsData";
+import style from "./overview.module.scss";
 
 const Overview = () => {
   const { data, isPending, error } = useCollectionsData();
@@ -30,7 +31,10 @@ const Overview = () => {
   };
 
   return (
-    <div style={{ padding: "30px", maxWidth: "1200px", margin: "0 auto" }}>
+    <div
+      className={style.overview}
+      style={{ padding: "30px", maxWidth: "1200px", margin: "0 auto" }}
+    >
       <h1
         style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "20px" }}
       >

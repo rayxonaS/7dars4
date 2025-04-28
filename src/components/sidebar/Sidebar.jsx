@@ -16,7 +16,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
             alt=""
             width={24}
           />
-          Overview
+          <span className={style.link_text}>Overview</span>
         </Link>
         <Link className={style.link} to="/transactions">
           <img
@@ -25,7 +25,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
             alt=""
             width={24}
           />
-          Transactions
+          <span className={style.link_text}>Transactions</span>
         </Link>
         <Link className={style.link} to="/budgets">
           <img
@@ -34,7 +34,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
             alt=""
             width={24}
           />
-          Budgets
+          <span className={style.link_text}>Budgets</span>
         </Link>
         <Link className={style.link} to="/pots">
           <img
@@ -43,7 +43,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
             alt=""
             width={24}
           />
-          Pots
+          <span className={style.link_text}>Pots</span>
         </Link>
         <Link className={style.link} to="/recuringBills">
           <img
@@ -52,7 +52,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
             alt=""
             width={24}
           />
-          RecuringBills
+          <span className={style.link_text}>RecuringBills</span>
         </Link>
       </div>
       <button
@@ -64,7 +64,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
           src="../images/icon-minimize-menu.svg"
           alt=""
         />
-        Minimaze Menu
+        <span className={style.link_text}>Minimaze Menu</span>
       </button>
     </div>
   );

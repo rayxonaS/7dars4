@@ -11,7 +11,10 @@ function MainLayout() {
     }`}
     >
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-      <main>
+      <main
+        className={`main ${showSidebar ? "sidebar" : ""}
+    }`}
+      >
         <Outlet />
       </main>
     </div>

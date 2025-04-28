@@ -54,3 +54,20 @@ img {
   height: 24px;
   object-fit: contain;
 }
+
+.link_text {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &.collapsed .link_text {
+    opacity: 0;
+  }
+}
+
+.sidebar {
+  .link_text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+  }
+}
