@@ -1,15 +1,5 @@
 @import "../../scss/variables";
 
-.header {
-  background-color: #201f24;
-  height: 100vh;
-  padding-top: 4rem;
-  padding-left: 2.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .link {
   display: flex;
   width: 100%;
@@ -30,6 +20,9 @@
 
 .header_image {
   color: $grey-300;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 
   &:hover {
     color: $green;
@@ -38,4 +31,26 @@
 
 img {
   margin-bottom: 6.4rem;
+}
+
+.button {
+  display: flex;
+  gap: 2rem;
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+  font-size: $text-preset-3;
+  line-height: 150%;
+  color: $grey-300;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20rem;
+}
+
+.button_image {
+  color: $grey-300;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }

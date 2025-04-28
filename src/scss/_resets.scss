@@ -42,6 +42,32 @@ img {
   grid-template-columns: 300px 1fr;
 }
 
+.main_layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.main_layout.sidebar {
+  grid-template-columns: 1fr;
+}
+
+.header {
+  background-color: #201f24;
+  height: 100vh;
+  padding-top: 4rem;
+  padding-left: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 300px;
+}
+
+.header.sidebar {
+  transform: translateX(-300px);
+
+  position: absolute;
+}
+
 .container {
   width: 100%;
   max-width: 1500px;

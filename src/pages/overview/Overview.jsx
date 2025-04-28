@@ -37,7 +37,6 @@ const Overview = () => {
         Overview
       </h1>
 
-      {/* Top Summary */}
       <div
         style={{
           ...gridContainer,
@@ -65,11 +64,8 @@ const Overview = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div style={{ ...gridContainer, gridTemplateColumns: "2fr 1fr" }}>
-        {/* Left Side */}
         <div style={{ ...gridContainer }}>
-          {/* Pots */}
           <div style={cardStyle}>
             <div
               style={{
@@ -91,10 +87,8 @@ const Overview = () => {
               </button>
             </div>
             <h3 style={{ fontSize: "24px" }}>${totalSaved}</h3>
-            {/* Можно добавить список pots тут */}
           </div>
 
-          {/* Transactions */}
           <div style={cardStyle}>
             <div
               style={{
@@ -140,9 +134,7 @@ const Overview = () => {
           </div>
         </div>
 
-        {/* Right Side */}
         <div style={{ ...gridContainer }}>
-          {/* Recurring Bills */}
           <div style={cardStyle}>
             <div
               style={{
