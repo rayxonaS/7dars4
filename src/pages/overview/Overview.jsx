@@ -1,3 +1,4 @@
+import { Chart } from "../../components/Chart";
 import { useCollectionsData } from "../../hooks/useCollectionsData";
 import style from "./overview.module.scss";
 
@@ -33,7 +34,13 @@ const Overview = () => {
   return (
     <div
       className={style.overview}
-      style={{ padding: "30px", maxWidth: "1200px", margin: "0 auto" }}
+      style={{
+        padding: "30px",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        overflowY: "auto",
+        height: "100vh",
+      }}
     >
       <h1
         style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "20px" }}
@@ -159,6 +166,7 @@ const Overview = () => {
                 See Details
               </button>
             </div>
+
             <ul style={{ listStyle: "none", padding: 0 }}>
               <li style={{ marginBottom: "8px" }}>Paid Bills - $190</li>
               <li style={{ marginBottom: "8px" }}>Total Upcoming - $194.98</li>
@@ -166,6 +174,7 @@ const Overview = () => {
             </ul>
           </div>
         </div>
+        <Chart />
       </div>
     </div>
   );

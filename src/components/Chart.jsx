@@ -3,11 +3,12 @@ import ReactApexChart from "react-apexcharts";
 
 export const Chart = ({ budgets }) => {
   const [state, setState] = useState({
-    series: [44, 55, 41, 17, 15],
+    series: [50, 750, 75, 100],
     options: {
       chart: {
         type: "donut",
       },
+      labels: ["Entertaiment", "Bills", "Dining Out", "Personal Care"],
       responsive: [
         {
           breakpoint: 480,
@@ -25,7 +26,7 @@ export const Chart = ({ budgets }) => {
   });
 
   return (
-    <div>
+    <div style={{ width: "400px" }}>
       <div id="chart">
         <ReactApexChart
           options={state.options}
